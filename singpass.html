@@ -8,117 +8,198 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
-    margin: 0;
-    padding: 0;
-    background-color: #ADD8E6;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6;
+        }
+        .navbar {
+            background-color: #ADD8E6 ;
+            padding: 15px 0;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
+        .container{color: #000080 ;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #000080 ;
+            margin-left: 15px;
+        }
+        .btn-outline-primary {
+            color: white;
+            border-color: black;
+            margin-right: 30px;
+            background-color: #000080;
+        }
+        .btn-outline-primary:hover {
+            background-color: #00ffea;
+            color: black;
+        }
 
-.login-box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    max-width: 90%;
-}
+        .btn-outline-secondary {
+            color: white;
+            border-color: black;
+            margin-right: 30px;
+            background-color: #000080;
 
-.header h1 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #333;
-}
+        }
 
-.header p {
-    margin-bottom: 20px;
-    color: #777;
-}
+        .btn-outline-secondary:hover {
+            background-color: #00ffea;
+            color: black;
+        }
 
-.form-group {
-    margin-bottom: 15px;
-}
+        .singpass-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
+        .login-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 50px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%;
+        }
 
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+        .header{
+            font-size: 24px;
+            color: #000000;
+        }
 
-.login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #FF0000;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #199175;
+            border-radius: 4px;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF0000;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
 
-.login-btn:hover {
-    background-color: #CC0000;
-}
+        .login-btn:hover {
+            background-color: #CC0000;
+        }
 
-.links {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
 
-.links a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.links a:hover {
-    text-decoration: underline;
-}
 
     </style>
-
 </head>
 <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SecureTransact</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="wallet.html">Wallet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                <a href="register.html" class="btn btn-outline-secondary">Register</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="singpass-container">
         <div class="login-box">
             <div class="header">
                 <h1>Log in with Singpass</h1>
                 <p>Your trusted digital identity</p>
             </div>
+
             <form id="login-form">
                 <div class="form-group">
                     <label for="singpass-id">Singpass ID</label>
                     <input type="text" id="singpass-id" name="singpass-id" placeholder="Enter Sinpass ID" required>
                 </div>
+
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter Password" required>
                 </div>
                 <button type="submit" class="login-btn">Log in</button>
-                <div class="links">
-                </div>
             </form>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="script.js"></script>
 </body>
 </html>

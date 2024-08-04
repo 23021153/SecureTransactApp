@@ -29,6 +29,7 @@
         .payment-method {
             margin-bottom: 20px;
         }
+        
         .payment-method img {
             width: 50px;
         }
@@ -93,13 +94,12 @@
         <div class="payment-method">
             <h2>Select Payment Method</h2>
             <div>
-                <button>Credit Card</button>
-                <button>Paypal</button>
-                <button>Other</button>
+                <button>Mastercard</button>
+                <button>Visa</button>
             </div>
         </div>
         <div class="credit-cards">
-            <div class="card" style="background: linear-gradient(135deg, #6E3B6E 0%, #B642B5 100%);">
+            <div class="card" style="background: linear-gradient(135deg, #6e453b 0%, #B642B5 100%);">
                 <div>
                     <div>Current Balance</div>
                     <div>$5,750.20</div>
@@ -116,13 +116,10 @@
                     <div>4294 2436 4780 2468</div>
                     <div>12/24</div>
                 </div>
-                <img src="visa.png" alt="Mastercard">
+                <img src="visa.png" alt="Visa">
             </div>
         </div>
-        <div class="new-card">
-            <img src="add.png" alt="Add New">
-            <div>Add new</div>
-        </div>
+
         <div class="form-group">
             <label for="card-number">Credit card</label>
             <input type="text" id="card-number" value="2324 5566 6677 7898">
@@ -143,7 +140,7 @@
             <input type="checkbox" id="save-card">
             <label for="save-card">Save card</label>
         </div>
-        <button class="pay-button">Pay</button>
+        <a href="confirmation.html" type="pay-submit">Pay</a>
     </div>
 </body>
 </html>
